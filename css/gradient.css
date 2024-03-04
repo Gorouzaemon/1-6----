@@ -1,0 +1,19 @@
+.gradient4{
+    display: inline-block;
+    padding: 5px 30px;  
+    border-radius:20px;
+    text-decoration: none;
+    border:1px solid #fa6c9f;
+    color: #fa6c9f;
+    outline: none;
+    /*アニメーションの指定*/ 
+    transition: all 0.4s ease-out;
+}
+.gradient4:hover{
+    border-color: transparent;
+    color: #fff;
+    background: linear-gradient(to left,#fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+    background-size: 200% auto;
+    background-position: right center;
+    box-shadow: 0 5px 10px rgb(250,108,19,0.4,);
+}

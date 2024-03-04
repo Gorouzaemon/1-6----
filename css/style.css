@@ -1,0 +1,137 @@
+/* 
+　作成日：12/5
+  作成者：五右衛門
+*/
+html{
+    font-size: 100%;
+}
+body{
+    color: #2d2d2d;
+    font-family: 'Crimson Text', serif;
+}
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li{
+    list-style: none;
+}
+.mainvisual{
+    width: 90vw;
+    margin:0 auto 0 auto;
+}
+.mainvisual img{
+    vertical-align:bottom;
+    width: 100%;
+    margin-top: 4%;
+}
+/* -header- */
+#header{
+    display: flex;
+    margin: 0 auto 30px auto;
+    padding: 32px 0;
+    width: 90vw;
+    align-items: center;
+}
+#header .site-title{
+    width: 110px;
+    line-height: 1px;
+    margin-right: 50px;
+}
+#header .site-title a{
+    display: block;
+}
+#header nav ul{
+    display: flex;
+}
+#header nav ul li{
+    font-size: 0.875rem;
+    margin-right: 30px;
+}
+#header nav ul li:last-child{
+    margin-right: 0;
+}
+#header nav ul li a{
+    color: #2d2d2d;
+    text-decoration: none;
+}
+/* -main */
+.container{
+    max-width: 1000px;
+    margin:0 auto;
+    padding: 0 18px;
+}
+.content{
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+.section-title{
+   font-weight: normal;
+   font-size: 1.5rem;
+   margin-bottom: 4px;
+}
+.section-title-en{
+    margin-bottom: 25px;
+    display: inline-block;
+}
+.content .image{
+    width: 50%;
+}
+.content .text{
+    width: 50%;
+    padding: 0 7%;
+}
+#work .image{
+    width: 50%;
+}
+#work .text{
+    width: 50%;
+    padding: 0 7%;
+}
+/* -footer- */
+#footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    padding: 20px 0;
+}
+#footer .logo{
+    width: 110px;
+}
+/* -responsive- */
+@media screen and (max-width:767px){
+    .mainvisual{
+        margin:0;
+        width: 100%;
+    }
+    .mainvisual img{
+       height: 50vh;
+        object-fit: cover;
+    }
+    #header{
+        padding:20px 18px;
+        width: 100%;
+    }
+    .content{
+        flex-direction: column;
+    }
+    #concept .text,#work .text{
+        width: 100%;
+
+    }
+    #concept .image,#work .image{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    /* .contentが役に立っていないですが、workクラスのみ
+    反映がなされていないという摩訶不思議な現象が起きていた
+    のでごり押しました。 */
+    .section-title{
+        font-size: 1.25rem;
+    }
+    #work{
+        flex-direction: column-reverse;
+    }
+
+}

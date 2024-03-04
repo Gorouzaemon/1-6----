@@ -1,0 +1,69 @@
+#header li{
+    width: 200px;
+}
+
+/*==================================================
+　5-3-9 テキストが入れ替わる
+===================================*/
+
+
+.gnavi li a{
+    /*テキストの基点とするためrelativeを指定*/
+	position: relative;
+    /*はみ出る要素を隠す*/
+	overflow: hidden;
+  align-items: center;
+
+    /* 上のhiddenを入れなかったら、animationによって消えていくため、
+    animationの途中ではまだ残っているような演出になる。
+    これはこれでおしゃれな気がする */
+
+
+	padding:10px 60px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.gnavi li span{
+    /*絶対配置でテキストの位置を決める*/
+	position: absolute;
+	left: 50%;
+	top:0;
+    /*アニメーションの指定*/
+	transition: all .5s;
+	transform: translate(-50%, 0);
+
+    /* ただ単に場所をtransformによってaタグ内を移動する */
+
+
+
+  /*ブロック要素にして透過なし、テキスト折り返しなし*/  
+	display: block;
+    
+
+    /* blockにしてもそんなに変りはしない */
+
+
+
+	opacity:1;
+	white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.gnavi li span:nth-child(2){
+	opacity:0;/*透過0に*/
+    transform: translate(-50%,100%);/*X方向に-50% Y方向に100%*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.gnavi li:hover span:nth-child(1){
+	opacity:0;/*透過0に*/
+    transform: translate(-50%,-100%);/*X方向に-50% Y方向に-100%*/
+}
+
+.gnavi li:hover span:nth-child(2){
+	opacity:1;/*不透明に*/
+	transform: translate(-50%, 0);/*X方向に-50% Y方向に0*/
+}
+
